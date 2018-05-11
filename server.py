@@ -29,7 +29,7 @@ def task():
 		ckan_module = CkanMetadata(dataset_name)
 		result = ckan_module.transformToRdf(metadata)
 		logging.debug(result)
-		filerdf = open(dataset_name+".ttl","w")
+		filerdf = open("files/"+dataset_name+".ttl","w")
 		filerdf.write(result)
 		filerdf.close()
                 logging.info("Generated rdf file:"+dataset_name+".ttl")
